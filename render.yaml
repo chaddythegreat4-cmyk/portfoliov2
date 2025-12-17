@@ -1,0 +1,44 @@
+# Render Blueprint for Chad RV Abcede Portfolio
+# This file enables one-click deployment to Render
+
+services:
+  # Backend API Service
+  - type: web
+    name: chad-portfolio-backend
+    runtime: node
+    plan: free
+    rootDir: backend
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: FLOWISE_API_URL
+        value: https://cloud.flowiseai.com/api/v1/prediction/74ac5be7-7e7b-4dd1-ace1-ff12e997a42e
+      - key: GITHUB_PROFILE_URL
+        value: https://github.com/killergamer19
+      - key: PORT
+        value: 5000
+    healthCheckPath: /health
+
+  # Frontend Static Site
+  - type: web
+    name: chad-portfolio-frontend
+    runtime: static
+    plan: free
+    rootDir: frontend
+    buildCommand: npm install && npm run build
+    staticPublishPath: dist
+    envVars:
+      - key: VITE_API_BASE_URL
+        sync: false  # Must be manually set to backend URL after backend deploys
+      - key: VITE_GITHUB_PROFILE_URL
+        value: https://github.com/killergamer19
+    headers:
+      - path: /*
+        name: X-Frame-Options
+        value: SAMEORIGIN
+      - path: /*
+        name: X-Content-Type-Options
+        value: nosniff
+      - path: /*
+        name: X-XSS-Protection
+        value: 1; mode=block

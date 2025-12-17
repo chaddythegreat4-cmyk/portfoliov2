@@ -1,0 +1,18 @@
+{
+  "name": "portfolio-ai-chad",
+  "version": "1.0.0",
+  "description": "Full-stack AI-powered portfolio for Chad RV Abcede",
+  "main": "index.js",
+  "scripts": {
+    "install-all": "npm install && cd frontend && npm install && cd ../backend && npm install",
+    "dev": "concurrently \"cd backend && npm run dev\" \"cd frontend && npm run dev\"",
+    "build": "cd frontend && npm run build",
+    "start": "cd backend && npm start"
+  },
+  "keywords": ["portfolio", "AI", "chatbot", "fullstack"],
+  "author": "Chad RV Abcede",
+  "license": "MIT",
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
