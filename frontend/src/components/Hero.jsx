@@ -4,7 +4,7 @@ const GITHUB_URL = import.meta.env.VITE_GITHUB_PROFILE_URL || 'https://github.co
 
 function Hero() {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-[#0A1628] px-4 md:px-8 lg:px-16">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-[#0A1628] px-4 md:px-8 lg:px-16 pt-20 md:pt-24">
       {/* Animated Background Elements */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute -top-40 -right-40 w-96 h-96 bg-cyan-500 rounded-full mix-blend-multiply filter blur-3xl opacity-10 animate-blob"></div>
@@ -13,19 +13,19 @@ function Hero() {
 
       {/* Main Content Container */}
       <div className="relative max-w-7xl w-full mx-auto z-10">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 lg:gap-16 items-center">
           
           {/* Left Side - Profile Image with Corner Brackets */}
-          <div className="flex justify-center lg:justify-start">
+          <div className="flex justify-center lg:justify-start pt-8 md:pt-0">
             <div className="relative group">
               {/* Decorative Corner Brackets */}
-              <div className="absolute -top-4 -left-4 w-16 h-16 border-t-4 border-l-4 border-cyan-400"></div>
-              <div className="absolute -top-4 -right-4 w-16 h-16 border-t-4 border-r-4 border-cyan-400"></div>
-              <div className="absolute -bottom-4 -left-4 w-16 h-16 border-b-4 border-l-4 border-cyan-400"></div>
-              <div className="absolute -bottom-4 -right-4 w-16 h-16 border-b-4 border-r-4 border-cyan-400"></div>
+              <div className="absolute -top-2 -left-2 md:-top-4 md:-left-4 w-8 h-8 md:w-16 md:h-16 border-t-2 md:border-t-4 border-l-2 md:border-l-4 border-cyan-400"></div>
+              <div className="absolute -top-2 -right-2 md:-top-4 md:-right-4 w-8 h-8 md:w-16 md:h-16 border-t-2 md:border-t-4 border-r-2 md:border-r-4 border-cyan-400"></div>
+              <div className="absolute -bottom-2 -left-2 md:-bottom-4 md:-left-4 w-8 h-8 md:w-16 md:h-16 border-b-2 md:border-b-4 border-l-2 md:border-l-4 border-cyan-400"></div>
+              <div className="absolute -bottom-2 -right-2 md:-bottom-4 md:-right-4 w-8 h-8 md:w-16 md:h-16 border-b-2 md:border-b-4 border-r-2 md:border-r-4 border-cyan-400"></div>
               
               {/* Profile Image Container */}
-              <div className="relative w-80 h-96 overflow-hidden">
+              <div className="relative w-64 h-80 sm:w-72 sm:h-[28rem] md:w-80 md:h-96 overflow-hidden">
                 <img 
                   src="https://raw.githubusercontent.com/chaddythegreat4-cmyk/me/main/chad.jpg" 
                   alt="Chad RV Abcede"
