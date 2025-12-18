@@ -42,7 +42,7 @@
 Add these environment variables:
 
 ```
-FLOWISE_API_URL=https://cloud.flowiseai.com/api/v1/prediction/74ac5be7-7e7b-4dd1-ace1-ff12e997a42e
+FLOWISE_API_URL=https://cloud.flowiseai.com/api/v1/prediction/0c99e21b-0275-40cf-8e6c-8e521215d7a7
 GITHUB_PROFILE_URL=https://github.com/killergamer19
 PORT=5000
 ```

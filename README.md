@@ -74,7 +74,7 @@ portfolio-ai/
 
    **Backend** (`backend/.env`):
    ```env
-   FLOWISE_API_URL=https://cloud.flowiseai.com/api/v1/prediction/74ac5be7-7e7b-4dd1-ace1-ff12e997a42e
+   FLOWISE_API_URL=https://cloud.flowiseai.com/api/v1/prediction/0c99e21b-0275-40cf-8e6c-8e521215d7a7
    GITHUB_PROFILE_URL=https://github.com/killergamer19
    PORT=5000
    ```
@@ -108,7 +108,7 @@ portfolio-ai/
 
 3. **Add Environment Variables**
    ```
-   FLOWISE_API_URL=https://cloud.flowiseai.com/api/v1/prediction/74ac5be7-7e7b-4dd1-ace1-ff12e997a42e
+   FLOWISE_API_URL=https://cloud.flowiseai.com/api/v1/prediction/0c99e21b-0275-40cf-8e6c-8e521215d7a7
    GITHUB_PROFILE_URL=https://github.com/killergamer19
    PORT=5000
    ```
@@ -196,7 +196,7 @@ Response: { "reply": "AI response" }
 ### Modify AI Behavior
 The chatbot behavior is controlled by the Flowise API configuration. To modify:
 1. Access your Flowise dashboard at https://cloud.flowiseai.com
-2. Update the chatflow with ID: `74ac5be7-7e7b-4dd1-ace1-ff12e997a42e`
+2. Update the chatflow with ID: `0c99e21b-0275-40cf-8e6c-8e521215d7a7`
 3. Modify the system prompt and knowledge base as needed
 
 ## 🐛 Troubleshooting
