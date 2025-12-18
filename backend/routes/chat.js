@@ -24,6 +24,7 @@ router.post('/', async (req, res) => {
 
   } catch (error) {
     console.error('Chat error:', error.message);
+    console.error('Error stack:', error.stack);
     
     // Handle specific error cases
     if (error.response) {
@@ -33,11 +34,13 @@ router.post('/', async (req, res) => {
       });
     }
 
-    // Generic error response
-    res.status(500).json({
-      error: 'Internal server error',
-      reply: 'I apologize for the inconvenience. Please try again later.'
-    });
+    // Generic error response - CORS headers should be set by middleware
+    if (!res.headersSent) {
+      res.status(500).json({
+        error: 'Internal server error',
+        reply: 'I apologize for the inconvenience. Please try again later.'
+      });
+    }
   }
 });
 
